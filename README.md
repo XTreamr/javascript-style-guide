@@ -22,40 +22,40 @@ Otras Guías de Estilos
   1. [Referencias](#referencias)
   1. [Objetos](#objetos)
   1. [Arreglos](#arreglos)
-  1. [Destructuring](#destructuring)
-  1. [Cadenas de Texto](#cadenas-de-texto)
-  1. [Funciones](#funciones)
-  2. [Parametros de funciones](#parametros-de-funciones)
-  3. [Notación de Funciones de Flecha](#notación-de-funciones-de-flecha)
-  4. [Clases y Constructores](#clases-y-constructores)
-  6. [Módulos](#módulos)
-  5. [Imports orden](#imports-orden)
-  8. [Iteradores y Generadores](#iteradores-y-generadores)
-  9. [Propiedades](#propiedades)
-  10. [Variables](#variables)
-  11. [Hoisting](#hoisting)
-  12. [Expresiones de comparación e igualdad](#expresiones-de-comparación-e-igualdad)
-  13. [Bloques](#bloques)
-  14. [Comentarios](#comentarios)
-  15. [Espacios en blanco](#espacios-en-blanco)
-  16. [Comas](#comas)
-  17. [Puntos y Comas](#puntos-y-comas)
-  18. [Casting de Tipos y Coerción](#casting-de-tipos-y-coerción)
-  19. [Convenciones de nomenclatura](#convenciones-de-nomenclatura)
-  20. [Funciones de Acceso](#funciones-de-acceso)
-  21. [Eventos](#eventos)
-  22. [jQuery](#jquery)
-  23. [Compatibilidad con EcmaScript 5](#compatibilidad-con-ecmascript-5)
-  24. [Estilos de EcmaScript6+ (ES2015+)](#estilos-de-ecmascript6-es-2015)
-  25. [Pruebas](#pruebas)
-  26. [Desempeño](#desempeño)
-  27. [Recursos](#recursos)
-  28. [En la cancha](#en-la-cancha)
-  29. [Traducciones](#traducciones)
-  30. [La guía de la Guía de Estilos JavaScript](#la-guía-de-la-guía-de-estilos-de-javascript)
-  31. [Charla con nosotros sobre Javascript](#charla-con-nosotros-sobre-javascript)
-  32. [Colaboradores](#colaboradores)
-  33. [Licencia](#licencia)
+  3. [Destructuring](#destructuring)
+  5. [Cadenas de Texto](#cadenas-de-texto)
+  6. [Funciones](#funciones)
+  7. [Parametros de funciones](#parametros-de-funciones)
+  8. [Notación de Funciones de Flecha](#notación-de-funciones-de-flecha)
+  9. [Clases y Constructores](#clases-y-constructores)
+  10. [Módulos](#módulos)
+  11. [Imports orden](#imports-orden)
+  12. [Iteradores y Generadores](#iteradores-y-generadores)
+  13. [Propiedades](#propiedades)
+  14. [Variables](#variables)
+  15. [Hoisting](#hoisting)
+  16. [Expresiones de comparación e igualdad](#expresiones-de-comparación-e-igualdad)
+  17. [Bloques](#bloques)
+  18. [Comentarios](#comentarios)
+  19. [Espacios en blanco](#espacios-en-blanco)
+  20. [Comas](#comas)
+  21. [Puntos y Comas](#puntos-y-comas)
+  22. [Casting de Tipos y Coerción](#casting-de-tipos-y-coerción)
+  23. [Convenciones de nomenclatura](#convenciones-de-nomenclatura)
+  24. [Funciones de Acceso](#funciones-de-acceso)
+  25. [Eventos](#eventos)
+  26. [jQuery](#jquery)
+  27. [Compatibilidad con EcmaScript 5](#compatibilidad-con-ecmascript-5)
+  28. [Estilos de EcmaScript6+ (ES2015+)](#estilos-de-ecmascript6-es-2015)
+  29. [Pruebas](#pruebas)
+  30. [Desempeño](#desempeño)
+  31. [Recursos](#recursos)
+  32. [En la cancha](#en-la-cancha)
+  33. [Traducciones](#traducciones)
+  34. [La guía de la Guía de Estilos JavaScript](#la-guía-de-la-guía-de-estilos-de-javascript)
+  35. [Charla con nosotros sobre Javascript](#charla-con-nosotros-sobre-javascript)
+  36. [Colaboradores](#colaboradores)
+  37. [Licencia](#licencia)
 
 ## Tipos
 
@@ -274,6 +274,18 @@ Otras Guías de Estilos
     // bien
     const [first, second] = arr;
     ```
+    
+  - Destructurin en objetos solo un nivel
+  ```javascript
+    // mal
+    const obj = {a: 'a', b: { x: 'x' } }
+    const { b: { x } } = obj
+    
+    // bien
+    const obj = {a: 'a', b: { x: 'x' } }
+    const { b } = obj
+    const { x } = b
+  ```
 
   - Usa object destructuring para múltiple valores de retorno, no array destructuring.
 
