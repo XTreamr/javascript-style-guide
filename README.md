@@ -28,33 +28,34 @@ Otras Guías de Estilos
   2. [Parametros de funciones](#parametros-de-funciones)
   3. [Notación de Funciones de Flecha](#notación-de-funciones-de-flecha)
   4. [Clases y Constructores](#clases-y-constructores)
-  5. [Módulos](#módulos)
-  6. [Iteradores y Generadores](#iteradores-y-generadores)
-  7. [Propiedades](#propiedades)
-  8. [Variables](#variables)
-  9. [Hoisting](#hoisting)
-  10. [Expresiones de comparación e igualdad](#expresiones-de-comparación-e-igualdad)
-  11. [Bloques](#bloques)
-  12. [Comentarios](#comentarios)
-  13. [Espacios en blanco](#espacios-en-blanco)
-  14. [Comas](#comas)
-  15. [Puntos y Comas](#puntos-y-comas)
-  16. [Casting de Tipos y Coerción](#casting-de-tipos-y-coerción)
-  17. [Convenciones de nomenclatura](#convenciones-de-nomenclatura)
-  18. [Funciones de Acceso](#funciones-de-acceso)
-  19. [Eventos](#eventos)
-  20. [jQuery](#jquery)
-  21. [Compatibilidad con EcmaScript 5](#compatibilidad-con-ecmascript-5)
-  22. [Estilos de EcmaScript6+ (ES2015+)](#estilos-de-ecmascript6-es-2015)
-  23. [Pruebas](#pruebas)
-  24. [Desempeño](#desempeño)
-  25. [Recursos](#recursos)
-  26. [En la cancha](#en-la-cancha)
-  27. [Traducciones](#traducciones)
-  28. [La guía de la Guía de Estilos JavaScript](#la-guía-de-la-guía-de-estilos-de-javascript)
-  29. [Charla con nosotros sobre Javascript](#charla-con-nosotros-sobre-javascript)
-  30. [Colaboradores](#colaboradores)
-  31. [Licencia](#licencia)
+  6. [Módulos](#módulos)
+  5. [Imports orden](#imports-orden)
+  8. [Iteradores y Generadores](#iteradores-y-generadores)
+  9. [Propiedades](#propiedades)
+  10. [Variables](#variables)
+  11. [Hoisting](#hoisting)
+  12. [Expresiones de comparación e igualdad](#expresiones-de-comparación-e-igualdad)
+  13. [Bloques](#bloques)
+  14. [Comentarios](#comentarios)
+  15. [Espacios en blanco](#espacios-en-blanco)
+  16. [Comas](#comas)
+  17. [Puntos y Comas](#puntos-y-comas)
+  18. [Casting de Tipos y Coerción](#casting-de-tipos-y-coerción)
+  19. [Convenciones de nomenclatura](#convenciones-de-nomenclatura)
+  20. [Funciones de Acceso](#funciones-de-acceso)
+  21. [Eventos](#eventos)
+  22. [jQuery](#jquery)
+  23. [Compatibilidad con EcmaScript 5](#compatibilidad-con-ecmascript-5)
+  24. [Estilos de EcmaScript6+ (ES2015+)](#estilos-de-ecmascript6-es-2015)
+  25. [Pruebas](#pruebas)
+  26. [Desempeño](#desempeño)
+  27. [Recursos](#recursos)
+  28. [En la cancha](#en-la-cancha)
+  29. [Traducciones](#traducciones)
+  30. [La guía de la Guía de Estilos JavaScript](#la-guía-de-la-guía-de-estilos-de-javascript)
+  31. [Charla con nosotros sobre Javascript](#charla-con-nosotros-sobre-javascript)
+  32. [Colaboradores](#colaboradores)
+  33. [Licencia](#licencia)
 
 ## Tipos
 
@@ -797,6 +798,74 @@ Otras Guías de Estilos
 
 **[[⬆ regresar a la Tabla de Contenido]](#tabla-de-contenido)**
 
+## Imports orden
+
+  -  Ordena los imports siguiento estas reglas:
+  1- Primero imports de paquetes externos
+  ```javascript
+    // mal
+    import Component from '../../Component';
+    import react from 'react';
+    
+    // bien
+    import react from 'react';
+    import Component from '../../Component';
+  ```
+  2- Ordena los imports relativos de más lejano a más cercano
+  ```javascript
+    // mal
+    import Item from '../Item'
+    import Other from '../../../Other'
+    import Component from '../../Component'
+    
+    import MyComponent from './MyComponent'
+    import Button from './components/Button'
+    
+    // bien 
+    import Other from '../../../Other'
+    import Component from '../../Component'
+    import Item from '../Item'
+    
+    import Button from './components/Button'
+    import MyComponent from './MyComponent'
+  ```
+  
+  3- Pon al final de todos los imports los imports de css 
+   ```javascript
+    // mal
+    import Item from '../Item';
+    import styles from './myComponent.module.scss'
+    import Other from '../../../Other';
+    import Component from '../../Component';
+    
+    // bien 
+    import Other from '../../../Other';
+    import Component from '../../Component';
+    import Item from '../Item'; 
+    
+    import styles from './myComponent.module.scss'
+  ```
+  4- Separa en bloques para diferenciar los imports anteriores:
+  ```javascript 
+    // mal 
+    import react from 'react';
+    import classnames from 'classnames';
+    import Other from '../../../Other';
+    import Component from '../../Component';
+    import Item from '../Item'; 
+    import styles from './myComponent.module.scss'
+    
+    // bien 
+    import react from 'react';
+    import classnames from 'classnames';
+    
+    import Other from '../../../Other';
+    import Component from '../../Component';
+    import Item from '../Item'; 
+    
+    import styles from './myComponent.module.scss'
+  ```
+  
 
 ## Propiedades
 
