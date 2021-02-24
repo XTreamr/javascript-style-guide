@@ -25,35 +25,36 @@ Otras Guías de Estilos
   1. [Destructuring](#destructuring)
   1. [Cadenas de Texto](#cadenas-de-texto)
   1. [Funciones](#funciones)
-  1. [Notación de Funciones de Flecha](#notación-de-funciones-de-flecha)
-  1. [Clases y Constructores](#clases-y-constructores)
-  1. [Módulos](#módulos)
-  1. [Iteradores y Generadores](#iteradores-y-generadores)
-  1. [Propiedades](#propiedades)
-  1. [Variables](#variables)
-  1. [Hoisting](#hoisting)
-  1. [Expresiones de comparación e igualdad](#expresiones-de-comparación-e-igualdad)
-  1. [Bloques](#bloques)
-  1. [Comentarios](#comentarios)
-  1. [Espacios en blanco](#espacios-en-blanco)
-  1. [Comas](#comas)
-  1. [Puntos y Comas](#puntos-y-comas)
-  1. [Casting de Tipos y Coerción](#casting-de-tipos-y-coerción)
-  1. [Convenciones de nomenclatura](#convenciones-de-nomenclatura)
-  1. [Funciones de Acceso](#funciones-de-acceso)
-  1. [Eventos](#eventos)
-  1. [jQuery](#jquery)
-  1. [Compatibilidad con EcmaScript 5](#compatibilidad-con-ecmascript-5)
-  1. [Estilos de EcmaScript6+ (ES2015+)](#estilos-de-ecmascript6-es-2015)
-  1. [Pruebas](#pruebas)
-  1. [Desempeño](#desempeño)
-  1. [Recursos](#recursos)
-  1. [En la cancha](#en-la-cancha)
-  1. [Traducciones](#traducciones)
-  1. [La guía de la Guía de Estilos JavaScript](#la-guía-de-la-guía-de-estilos-de-javascript)
-  1. [Charla con nosotros sobre Javascript](#charla-con-nosotros-sobre-javascript)
-  1. [Colaboradores](#colaboradores)
-  1. [Licencia](#licencia)
+  2. [Parametros de funciones](#parametros-de-funciones)
+  3. [Notación de Funciones de Flecha](#notación-de-funciones-de-flecha)
+  4. [Clases y Constructores](#clases-y-constructores)
+  5. [Módulos](#módulos)
+  6. [Iteradores y Generadores](#iteradores-y-generadores)
+  7. [Propiedades](#propiedades)
+  8. [Variables](#variables)
+  9. [Hoisting](#hoisting)
+  10. [Expresiones de comparación e igualdad](#expresiones-de-comparación-e-igualdad)
+  11. [Bloques](#bloques)
+  12. [Comentarios](#comentarios)
+  13. [Espacios en blanco](#espacios-en-blanco)
+  14. [Comas](#comas)
+  15. [Puntos y Comas](#puntos-y-comas)
+  16. [Casting de Tipos y Coerción](#casting-de-tipos-y-coerción)
+  17. [Convenciones de nomenclatura](#convenciones-de-nomenclatura)
+  18. [Funciones de Acceso](#funciones-de-acceso)
+  19. [Eventos](#eventos)
+  20. [jQuery](#jquery)
+  21. [Compatibilidad con EcmaScript 5](#compatibilidad-con-ecmascript-5)
+  22. [Estilos de EcmaScript6+ (ES2015+)](#estilos-de-ecmascript6-es-2015)
+  23. [Pruebas](#pruebas)
+  24. [Desempeño](#desempeño)
+  25. [Recursos](#recursos)
+  26. [En la cancha](#en-la-cancha)
+  27. [Traducciones](#traducciones)
+  28. [La guía de la Guía de Estilos JavaScript](#la-guía-de-la-guía-de-estilos-de-javascript)
+  29. [Charla con nosotros sobre Javascript](#charla-con-nosotros-sobre-javascript)
+  30. [Colaboradores](#colaboradores)
+  31. [Licencia](#licencia)
 
 ## Tipos
 
@@ -409,6 +410,22 @@ Otras Guías de Estilos
     ```
 
 **[[⬆ regresar a la Tabla de Contenido]](#tabla-de-contenido)**
+
+## Parametros de funciones
+
+  - Usa objetos para pasar parametros a las funciones
+
+ ```javascript
+    // mal
+    function nope(name, options, arguments) {
+      // ...algo...
+    }
+
+    // bien
+    function yup({ name, options, args }) {
+      // ...algo...
+    }
+  ```
 
 ## Notación de Funciones de Flecha
 
