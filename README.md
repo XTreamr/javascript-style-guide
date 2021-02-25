@@ -16,6 +16,10 @@ Otras Guías de Estilos
 - [CSS & SASS](https://github.com/ismamz/css)
 - [Ruby](https://github.com/airbnb/ruby)
 
+
+## Naming funciones y variables
+https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
+
 ## Tabla de Contenido
 
   1. [Tipos](#tipos)
