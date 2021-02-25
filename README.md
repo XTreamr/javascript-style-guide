@@ -1639,27 +1639,21 @@ https://hackernoon.com/the-art-of-naming-variables-52f44de00aad
 
 ## Puntos y Comas
 
-  - **Sip.**
+  - **No.**
 
     ```javascript
     // mal
-    (function () {
+    const fun = () => {
+      const name = 'Skywalker';
+      return name;
+    }
+
+    
+    // bien
+    const fun = () => {
       const name = 'Skywalker'
       return name
-    })()
-
-    // bien
-    (() => {
-      const name = 'Skywalker';
-      return name;
-    }());
-
-    // bien, pero arcaico (evita que la funcion se vuelva un argumento
-    // cuando dos archivos con IIFEs sean concatenados)
-    ;(() => {
-      const name = 'Skywalker';
-      return name;
-    }());
+    }
     ```
 
 **[[⬆ regresar a la Tabla de Contenido]](#tabla-de-contenido)**
